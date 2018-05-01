@@ -15,5 +15,5 @@ docker build . -t "serpent_ai_container"
 To run:
 
 ```
-docker run -d serpent_ai_container"
+docker run -d serpent_ai_container
 ```
