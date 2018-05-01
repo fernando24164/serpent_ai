@@ -1,4 +1,4 @@
-from python:3.6.5-slim-stretch
+FROM python:3.6.5-slim-stretch
 
 RUN mkdir /home/Serpent
 
