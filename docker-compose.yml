@@ -8,5 +8,5 @@ services:
       dockerfile: serpent.dockerfile
     volumes:
       - type: bind
-        source: ./test_docker
+        source: $PWD/serpent_docker
         target: /home/Serpent
