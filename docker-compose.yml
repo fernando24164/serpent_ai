@@ -1,0 +1,12 @@
+version: "3.6"
+
+services:
+
+  serpent:
+    build:
+      context: $PWD/serpent_docker
+      dockerfile: serpent.dockerfile
+    volumes:
+      - type: bind
+        source: ./test_docker
+        target: /home/Serpent
