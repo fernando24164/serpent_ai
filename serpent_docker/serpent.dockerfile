@@ -2,7 +2,7 @@ FROM python:3.6.5-slim-stretch
 
 RUN mkdir /home/Serpent
 
-WORKDIR /home/Serpent
+WORKDIR /home
 
 COPY requirements.txt .
 
@@ -12,6 +12,8 @@ RUN chmod +x entrypoint.sh
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["entrypoint.sh"]
+WORKDIR /home/Serpent
+
+ENTRYPOINT ["/home/entrypoint.sh"]
 
 VOLUME ["/home/Serpent"]
