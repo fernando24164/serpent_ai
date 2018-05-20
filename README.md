@@ -2,18 +2,23 @@
 
 A dockerfile to create a container with [SerpentAI](https://github.com/SerpentAI/SerpentAI) on it
 
-To build image container:
+Added a docker-compose file
+
+Create a folder named app in the main project folder
 
 ```bash
-cd serpent_docker
-```
+docker-compose up
+
+Then go in container
 
 ```bash
-docker build . -t "serpent_ai_container"
-```
+docker exec -it <name_of_container> /bin/bash
 
-To run:
+Now you can run
 
-```basfh
-docker run -d serpent_ai_container
-```
+```bash
+serpent generate game
+
+And all the files will be created in app folder outside container!
+
+And now hack games
